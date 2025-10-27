@@ -1,0 +1,94 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+.wp-block-create-block-st-map-list-block {
+	// background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+
+	// map-list-module styles
+
+
+	#map-container {
+	max-width:800px;
+	height:400px;
+	display:flex;
+	flex-direction: row;
+	border: 2px solid rgb(212, 212, 212);
+
+
+	}
+
+	#map-sidebar {
+	width:30%;
+	height:400px;
+	// background-color: green;
+	// overflow:scroll;
+	overflow-y:auto;
+		// border: 5px solid black;
+
+
+	}
+
+	#map {
+	width:70%;
+	height:100%;
+	}
+
+	#sidebar-ul {
+	margin: 0px;
+	padding:0px;
+	height: 0;
+	// border: 5px solid black;
+	}
+
+	.sidebar-li {
+	list-style-type: none;
+	min-height:100px;
+	// background-color:rgb(124, 87, 0);
+	max-width:95%;
+	color:black;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top:12px;
+	margin: 0px;
+	border-bottom: 1.5px solid black;
+
+	&.active {
+		background-color:rgb(220, 220, 220);
+	}
+	}
+
+	.leaflet-popup-content-wrapper{
+		min-width:190px;
+	}
+
+	// .leaflet-popup-content p{
+	// 	margin:0.5em;
+	// }
+
+	.place-title{
+		font-size:1.1em;
+		font-weight:bold;
+		margin:0px;
+
+	}
+	.popup-title{
+		font-size:1.5em;
+		font-weight:bold;
+		margin:0px;
+	}
+	.popup-details{
+		margin:0px;
+		margin-top:0.5rem;
+
+	}
+	
+}
+
+
