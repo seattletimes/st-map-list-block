@@ -43,7 +43,7 @@
 	#sidebar-ul {
 	margin: 0px;
 	padding:0px;
-	height: 0;
+	// height: 0;
 	// border: 5px solid black;
 	}
 
@@ -66,11 +66,17 @@
 
 	.leaflet-popup-content-wrapper{
 		min-width:190px;
+		border-radius: 6px;
 	}
 
-	// .leaflet-popup-content p{
-	// 	margin:0.5em;
-	// }
+	.leaflet-popup-content {
+		max-width:220px;
+
+		p {
+			margin:0;
+			padding-bottom:0.2rem;
+		}
+	}
 
 	.place-title{
 		font-size:1.1em;
@@ -85,7 +91,6 @@
 	}
 	.popup-details{
 		margin:0px;
-		margin-top:0.5rem;
 
 	}
 	

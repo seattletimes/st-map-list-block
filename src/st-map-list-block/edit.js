@@ -54,7 +54,7 @@ export default function Edit({ attributes, setAttributes }) {
 						label="Google Sheet ID"
 						value={sheetId}
 						onChange={(value) => setAttributes({ sheetId: value })}
-						help="Paste your Google Sheet ID here"
+						help="Paste your Google Sheet ID here. This is the string of numbers and letters in your sheet URL between `docs.google.com/spreadsheets/d/` and `/edit`."
 					/>
 				</PanelBody>
 			</InspectorControls>

@@ -31,6 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/st-map-list-block/editor.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+// TEST -- NEW REPO
 /**
  * Retrieves the translation of text.
  *
@@ -92,7 +93,7 @@ function Edit({
           onChange: value => setAttributes({
             sheetId: value
           }),
-          help: "Paste your Google Sheet ID here"
+          help: "Paste your Google Sheet ID here. This is the string of numbers and letters in your sheet URL between `docs.google.com/spreadsheets/d/` and `/edit`."
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {

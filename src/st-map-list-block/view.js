@@ -127,7 +127,13 @@ function addMarkers(data){
       fillOpacity: 0.7,
       title: item.name,
       }) 
-      .bindPopup(`<p class="popup-title">${item.name}</p><p class="popup-details">${item.address}</p>`)
+      .bindPopup(`<p class="popup-title">${item.name}</p>
+        <div class="popup-details">
+        ${item.blurb ? `<p>${item.blurb}</p>` : ''}
+        ${item.address ? `<p>${item.address}</p>` : ''}
+        ${item.price ? `<p>${item.price}</p>` : ''}
+        ${item.website ?`<a href="${item.website}">Website</a>`: ''}
+        </div>`)
       .addTo(map);
 
       // click listener
@@ -143,9 +149,32 @@ function addMarkers(data){
     );
        
         clickedListItem.classList.add("active")
-        clickedListItem.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
-        console.log("listItem- marker function", clickedListItem)
-        
+        // clickedListItem.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+        // console.log("listItem- marker function", clickedListItem)
+      const listItemTop = clickedListItem.offsetTop;
+      console.log("listItemTop", listItemTop)
+      // console.log("listItemTop bounding client rect", clickedListItem.getBoundingClientRect().top)
+
+      const mapSidebar = document.getElementById('map-sidebar');
+
+      const sidebarRect = mapSidebar.getBoundingClientRect();
+      const listItemRect = clickedListItem.getBoundingClientRect();
+
+      const mapContainer = document.getElementById('map-container');
+      console.log("mapContainer bounding client rect top", mapContainer.getBoundingClientRect().top);
+      console.log("mapContainer offsettop", mapContainer.offsetTop);
+
+
+      const scrollAmount = listItemRect.top - mapContainer.top;
+      console.log("scrollAmount", scrollAmount)
+      // console.log("mapSidebar bounding client rect top", mapSidebar.getBoundingClientRect().top)
+      // console.log("mapContainer bounding client rect top", mapContainer.getBoundingClientRect().top)
+
+      // Scroll the sidebar (not the whole page)
+      mapSidebar.scrollTo({
+        top: scrollAmount,
+        behavior: 'smooth'
+      });
 
        })
       return {name: item.name, marker} 
