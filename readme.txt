@@ -13,7 +13,7 @@ This block was created in order to improve the utility of ST recommendation list
 This map block aims to give readers the logistical information they need to make use of ST reviews without having to leave the site. It is also designed in a way that allows reporters and editors to have full agency over the process without having to get the graphics or development teams involved.
 
 == Workflow explanation ==
-1. Reporter inputs addresses into a copied version of this <a href="https://docs.google.com/spreadsheets/d/1-wPc2d11ffvzw6neuPJ2yQWWhCz76Y8_n_X8Vf2WepA/edit?gid=1945274273#gid=1945274273">Google Sheet</a>, which will geocode the addresses using an app script. 
+1. Reporter inputs addresses into a copied version of this [Google Sheet](https://docs.google.com/spreadsheets/d/1-wPc2d11ffvzw6neuPJ2yQWWhCz76Y8_n_X8Vf2WepA/edit?gid=1945274273#gid=1945274273), which will geocode the addresses using an app script. 
 
 2. In a WordPress story, the reporter will add a new block and select "St map list block"
 
