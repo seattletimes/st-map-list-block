@@ -66,9 +66,10 @@ fetch(url).then(response => response.text()).then(text => {
     });
     return obj;
   });
-  console.log("clean data", data);
-  console.log(data[1].name);
-  console.log(data.length);
+
+  // console.log("clean data", data);
+  // console.log(data[1].name);
+  // console.log(data.length);
   addMarkers(data);
   addSidebarItem(data);
 });
@@ -140,24 +141,30 @@ function addMarkers(data) {
       // clickedListItem.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
       // console.log("listItem- marker function", clickedListItem)
       const listItemTop = clickedListItem.offsetTop;
-      console.log("listItemTop", listItemTop);
+      // console.log("listItemTop", listItemTop)
       // console.log("listItemTop bounding client rect", clickedListItem.getBoundingClientRect().top)
 
       const mapSidebar = document.getElementById('map-sidebar');
       const sidebarRect = mapSidebar.getBoundingClientRect();
       const listItemRect = clickedListItem.getBoundingClientRect();
       const mapContainer = document.getElementById('map-container');
-      console.log("mapContainer bounding client rect top", mapContainer.getBoundingClientRect().top);
-      console.log("mapContainer offsettop", mapContainer.offsetTop);
+      // console.log("mapContainer bounding client rect top", mapContainer.getBoundingClientRect().top);
+      // console.log("mapContainer offsettop", mapContainer.offsetTop);
+
       const scrollAmount = listItemRect.top - mapContainer.top;
-      console.log("scrollAmount", scrollAmount);
+      // console.log("scrollAmount", scrollAmount)
       // console.log("mapSidebar bounding client rect top", mapSidebar.getBoundingClientRect().top)
       // console.log("mapContainer bounding client rect top", mapContainer.getBoundingClientRect().top)
 
       // Scroll the sidebar (not the whole page)
-      mapSidebar.scrollTo({
-        top: scrollAmount,
-        behavior: 'smooth'
+      // mapSidebar.scrollTo({
+      //   top: scrollAmount,
+      //   behavior: 'smooth'
+      // });
+
+      clickedListItem.scrollIntoView({
+        block: "center",
+        behavior: "smooth"
       });
     });
     return {
@@ -171,7 +178,7 @@ function addMarkers(data) {
 function onListItemClick(e) {
   const listItem = e.target.closest('.sidebar-li');
   if (!listItem) return; // if you click somewhere besides a list item, do nothing
-  console.log("listItem", listItem);
+  // console.log("listItem", listItem)
 
   // if list item is clicked, remove active class from everything and add it to the one that was clicked  
   document.querySelectorAll('.sidebar-li').forEach(item => item.classList.remove('active'));
